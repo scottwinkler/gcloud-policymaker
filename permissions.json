@@ -1,0 +1,53 @@
+{
+    "resource": {
+        "google_storage_bucket": {
+            "create": [
+                "storage.buckets.create",
+                "storage.buckets.get",
+                "compute.projects.get"
+            ],
+            "read": [
+                "storage.buckets.get",
+                "compute.projects.get"
+            ],
+            "update": [
+                "storage.buckets.update",
+                "storage.buckets.create",
+                "storage.buckets.get",
+                "storage.buckets.delete",
+                "storage.objects.list",
+                "compute.projects.get"
+            ],
+            "delete": [
+                "storage.buckets.get",
+                "storage.buckets.delete",
+                "storage.objects.list",
+                "compute.projects.get"
+            ]
+        },
+        "google_storage_bucket_object" : {
+            "create" : [
+                "storage.objects.create",
+                "storage.objects.get"
+            ],
+            "read" : [
+                "storage.objects.get"
+            ],
+            "delete": [
+                "storage.objects.delete"
+            ],
+            "update": [
+                "storage.objects.create",
+                "storage.objects.get",
+                "storage.objects.delete"
+            ]
+        }
+    },
+    "data": {
+        "google_storage_bucket_object": {
+            "read": [
+                "storage.objects.get"
+            ]
+        }
+    }
+}
